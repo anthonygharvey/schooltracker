@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TeacherTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+	test "first and last name are required" do
+		assert_not Teacher.new(first_name: "John", last_name: "").save
+	end
 end
